@@ -24,3 +24,8 @@ class UpdateQuestion(UpdateView):
     fields = ['author','question','content','created_date','draft','tags']
     success_url = ('/questions')
     template_name = 'Blog/edit_question.html'
+
+
+class DeleteQuestion(DeleteView):
+    model = Question
+    success_url = ('/questions')
