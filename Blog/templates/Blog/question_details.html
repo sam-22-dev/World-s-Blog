@@ -18,8 +18,23 @@
             <p class="mb-5" >{{question.created_date}}</p>
         </div>
 
+        <hr>
+
+        <h2>Answers</h2>
+
+        {% for answer in answers %}
+        <h5>{{answer.author}} - {{answer.created_date}}</h5>
+        <h6>{{answer.answer}}</h6>
+        {% endfor %}
 
 
+        <hr>
+
+        <form method="post">
+            {% csrf_token %}
+            {{form}}
+            <input type="submit" value="add a new answer">
+        </form>
 
 
 
