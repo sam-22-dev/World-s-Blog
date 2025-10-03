@@ -10,13 +10,36 @@
 
 
 
+<!-- Navbar Start -->
+        <nav class="navbar fixed-top navbar-expand-lg mb-5 bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/questions/">World's Blog</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+        </nav>
+<!-- Navbar End -->
+
         <div class="container">
             <h1 class="my-5">{{question}}</h1>
 
             <p class="mb-5" >{{question.content}}</p>
             <p class="mb-5" >{{question.author}}</p>
             <p class="mb-5" >{{question.created_date}}</p>
+
+
+
+            <a class="text-decoration-none link-secondary border border-4 border-dark-subtle my-3" href="/questions/update/{{question.id}}">Edit question</a>
+            <a class="text-decoration-none link-secondary border border-4 border-dark-subtle my-3" href="/questions/delete/{{question.id}}">Delete question</a>
+
         </div>
+
+
+
+
+
+
 
         <hr>
 
